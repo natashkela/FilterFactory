@@ -1,5 +1,5 @@
 /*
-  Theme Name: Xisen - MultiPurpose HTML5 Template for Startup 
+  Theme Name: Xisen - MultiPurpose HTML5 Template for Startup
   Author:basictheme
   Support: basictheme400@gmail.com
   Description: Creative HTML5 Template for Saas, Startup & Agency.
@@ -2038,6 +2038,11 @@ font-size: 14px;
 	font-size: 21px;
 	margin-bottom: 35px;
 	font-weight: 500;
+}
+.footer-widget {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .footer-widget ul li {
   margin-bottom: 20px;
