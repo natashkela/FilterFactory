@@ -3845,6 +3845,9 @@ transition-delay: 0.2s;
 .contact-info h3 {
   color: #fff;
 }
+.contact-info a {
+  color: white;
+}
 .contact-info p {
   color: #fff;
   font-size: 15px;
