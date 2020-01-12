@@ -376,7 +376,7 @@ $('.brand-active').owlCarousel({
 	// product-large-img
 	$('.product-large-img').slick({
 		dots: false,
-		arrows: false,
+		arrows: true,
 		infinite: true,
 		prevArrow: '<button type="button" class="slick-prev"><i class="far fa-long-arrow-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="far fa-long-arrow-right"></i></button>',
@@ -559,6 +559,39 @@ if ($("[data-aos]").length) {
 		google.maps.event.addDomListener(window, 'load', basicmap);
 	}
 
+	$('.ti-star').on('mouseover', function(){
+		var index = $(this).index();
+		$(this).parent().find('.ti-star').removeClass('active');
+		for(var i=0;i<=index;i++){
+			var star = $(this).parent().find('.ti-star')[i];
+			$(star).addClass('active');
+		}
+	});
+
+	var starAmount = 0;
+	$('.ti-star').on('click', function(){
+		var index = $(this).index();
+		$('.ti-star').removeClass('active');
+		console.log(index);
+		starAmount = index+1;
+		for(var i=0;i<=index;i++){
+			var star = $(this).parent().find('.ti-star')[i];
+			$(star).addClass('active');
+		}
+	});
+
+	$('.ratings').on('mouseout', function(){
+		$('.ti-star').removeClass('active');
+		if(starAmount>0){
+			for(var i=0;i<starAmount;i++){
+				var star = $(this).find('.ti-star')[i];
+				$(star).addClass('active');
+			}
+		}
+		else{
+			$('.ti-star').removeClass('active');
+		}
+	});
 
 
 })(jQuery);

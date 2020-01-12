@@ -5142,6 +5142,9 @@ transition-delay: 0.2s;
 .product-details-img {
 	overflow: hidden;
 }
+.product-large-img.products{
+	display:flex!important;
+}
 .product-large-img img {
 	max-width: 100%;
 }
