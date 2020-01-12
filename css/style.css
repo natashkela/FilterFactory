@@ -926,6 +926,7 @@ label {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	border-radius: 5px;
+  border: 1px solid grey;
 }
 .hero-form input:focus:-moz-placeholder{
 	opacity: 0;
