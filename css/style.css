@@ -7043,3 +7043,16 @@ si-border {
 .input-euro.dollar:before {
     left: 5px;
 }
+.profile-picture{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-center;
+}
+.profile-picture img{
+	height:70px;
+	border-radius:50%;
+	width:70px;
+}
+.profile-info .ti-star{
+	font-size:13px;
+}

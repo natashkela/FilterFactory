@@ -624,9 +624,30 @@ if ($("[data-aos]").length) {
 		$("#price").val(total);
  });
 
-	$('#profile-table').DataTable({
+	$('#all-filters').dataTable({
 		paging:false,
 		searching:false,
 		ordering:false,
+		bScrollInfinite: true,
+		sScrollY: "200px",
+		sDom:'Rlfrtip'
+	});
+
+	$('#billing-table').DataTable({
+		paging:false,
+		searching:false,
+		ordering:false,
+		bScrollInfinite: true,
+		sScrollY: "200px",
+		sDom:'Rlfrtip'
+	});
+
+	$('#transaction-table').DataTable({
+		paging:false,
+		searching:false,
+		ordering:false,
+		bScrollInfinite: true,
+		sScrollY: "200px",
+		sDom:'Rlfrtip'
 	});
 })(jQuery);
