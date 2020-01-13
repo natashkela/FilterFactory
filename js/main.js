@@ -614,13 +614,13 @@ if ($("[data-aos]").length) {
 	$("#price").keyup(function () {
 		$('#converted-price').removeClass('hidden');
 		 var price = Number($(this).val());
-		 var total = (price) * 1.05;
+		 var total = ((price) * 1.05).toFixed(2);
 		 $("#converted-price-value").val(total);
  });
 
  $("#converted-price-value").keyup(function () {
 		var price = Number($(this).val());
-		var total = (price) / 1.05;
+		var total = ((price) / 1.05).toFixed(2);
 		$("#price").val(total);
  });
 

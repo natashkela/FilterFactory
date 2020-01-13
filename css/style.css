@@ -7036,9 +7036,10 @@ si-border {
     padding-left:18px;
 }
 .input-dollar:before {
-    position: absolute;
-    top: 0;
-    content:"$";
+	position: absolute;
+	top: -3px;
+	content: "$";
+	left: 5px;
 }
 .input-euro.dollar:before {
     left: 5px;
@@ -7055,4 +7056,12 @@ si-border {
 }
 .profile-info .ti-star{
 	font-size:13px;
+}
+textarea{
+	background: #ffffff;
+	border: 1px solid #eaedff;
+	border-radius: 0;
+	height: 45px;
+	padding: 0 0 0 10px;
+	width: 100%;
 }
