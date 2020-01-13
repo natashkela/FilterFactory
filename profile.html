@@ -513,126 +513,282 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <table id="billing-table" class="display w-100">
-                                        <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Date</th>
-                                            <th>Price</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    Current Month: $ <span class="current-month-amount">0.00</span>
+                                    <br/>
+                                    All Earnings: $ <span class="all-earnings">300.00</span>
+                                </div>
+                                <div class="accordion mt-4 col-md-12 basic-accourdion basic-plus" id="accordionExamplea">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne2a">
+                                            <h5 class="mb-0">
+                                                <a class="btn-link" data-toggle="collapse" data-target="#collapseOnea" aria-expanded="true" aria-controls="collapseOne">
+                                                    Sale History
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOnea" class="collapse show" aria-labelledby="headingOne2a" data-parent="#accordionExamplea" style="">
+                                            <div class="card-body">
+                                                <div>
+                                                    <table id="billing-table" class="display w-100">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Date</th>
+                                                            <th>Price</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwoa">
+                                            <h5 class="mb-0">
+                                                <a class="btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Payout Transactions
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwoa" class="collapse" aria-labelledby="headingTwo3" data-parent="#accordionExamplea" style="">
+                                            <div class="card-body">
+                                                <div>
+                                                    <table id="transaction-table" class="display w-100">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Date</th>
+                                                            <th>Price</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td><span class="badge badge-pill badge-success mb-1">Complete</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="badge badge-pill badge-danger mb-1">Cancelled</span></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

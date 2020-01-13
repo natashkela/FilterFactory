@@ -609,11 +609,12 @@ if ($("[data-aos]").length) {
 	// 	}
 	// });
 
-	$('#all-filters').DataTable({
+	$('#all-filters').dataTable({
 		paging:false,
 		searching:false,
 		ordering:false,
 		bScrollInfinite: true,
+		sScrollY: "200px",
 		sDom:'Rlfrtip'
 	});
 
@@ -622,6 +623,16 @@ if ($("[data-aos]").length) {
 		searching:false,
 		ordering:false,
 		bScrollInfinite: true,
+		sScrollY: "200px",
+		sDom:'Rlfrtip'
+	});
+
+	$('#transaction-table').DataTable({
+		paging:false,
+		searching:false,
+		ordering:false,
+		bScrollInfinite: true,
+		sScrollY: "200px",
 		sDom:'Rlfrtip'
 	});
 })(jQuery);
