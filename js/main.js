@@ -609,9 +609,19 @@ if ($("[data-aos]").length) {
 	// 	}
 	// });
 
-	$('#profile-table').DataTable({
+	$('#all-filters').DataTable({
 		paging:false,
 		searching:false,
 		ordering:false,
+		bScrollInfinite: true,
+		sDom:'Rlfrtip'
+	});
+
+	$('#billing-table').DataTable({
+		paging:false,
+		searching:false,
+		ordering:false,
+		bScrollInfinite: true,
+		sDom:'Rlfrtip'
 	});
 })(jQuery);
