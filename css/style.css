@@ -5531,6 +5531,15 @@ transition-delay: 0.2s;
   }
 }
 
+.creator-details-img img {
+  display: block;
+  max-width: 100%;
+}
+
+.creator-large-img {
+  display: flex !important;
+}
+
 .cart-page-total {
   padding-top: 50px;
 }
