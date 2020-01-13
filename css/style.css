@@ -7026,3 +7026,20 @@ si-border {
 	font-family: poppins;
 	text-transform: capitalize;
 }
+.hidden {
+  display: none;
+}
+.input-dollar {
+    position: relative;
+}
+.input-dollar.left input {
+    padding-left:18px;
+}
+.input-dollar:before {
+    position: absolute;
+    top: 0;
+    content:"$";
+}
+.input-euro.dollar:before {
+    left: 5px;
+}

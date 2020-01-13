@@ -33,7 +33,11 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- File Pond -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
 </head>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <body>
 
 
@@ -666,11 +670,35 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list w-50">
                                         <label>Price <span class="required">*</span></label>
-                                        <input type="text" placeholder="">
+                                        <span class="input-dollar left">
+                                          <input type="text" id="price" placeholder="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Converted Price -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list w-50 hidden" id="converted-price">
+                                        <label>Please note that the price for the posting will be:</label>
+                                        <span class="input-dollar left">
+                                          <input type="text" id="converted-price-value" placeholder="">
+                                        </span>
                                     </div>
                                 </div>
                                 <!-- Filter Associated Files (.rexport) -->
+                                <div class="col-md-12">
+                                  <input type="file">
+                                  <script>
+                                    const inputElement = document.querySelector('input[type="file"]');
+                                    const pond = FilePond.create( inputElement );
+                                  </script>
+                                </div>
                                 <!-- Filter Description -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list w-50">
+                                        <label>Description <span class="required">*</span></label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
                                 <!-- Button to Wait for Approval -->
                                 <button type="button" class="btn btn-success mb5 btn-rounded">Upload For Review</button>
                             </div>
