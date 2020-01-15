@@ -117,9 +117,33 @@
                                 <h3 class="mb-20">Sign Up </h3>
                                 <p>Welcome!</a></p>
                                 <div class="mb-30"></div>
-                                <form action="#">
+                                <?php
+                                  if(isset($_GET['error'])) {
+                                    if($_GET['error'] == "emptyfields") {
+                                      echo <p class="signuperror">Fill in all fields!</p>;
+                                    } else if($_GET['error'] == "invalidemailuid") {
+                                      echo <p class="signuperror">Invalid username and email!</p>;
+                                    } else if($_GET['error'] == "invaliduid") {
+                                      echo <p class="signuperror">Invalid username!</p>;
+                                    } else if($_GET['error'] == "invalidemail") {
+                                      echo <p class="signuperror">Invalid email!</p>;
+                                    } else if($_GET['error'] == "passwordcheck") {
+                                      echo <p class="signuperror">Your passwords do not match!</p>;
+                                    } else if($_GET['error'] == "usertaken") {
+                                      echo <p class="signuperror">Username is already taken!</p>;
+                                    }
+                                  }
+                                  else if ($_GET['signup'] == "success") {
+                                    echo <p class="signusuccess">Signup successful!</p>;
+                                  }
+                                ?>
+                                <form action="includes/signup.inc.php" method="POST">
+                                    <label for="first-name">First Name <span>**</span></label>
+                                    <input id="first" type="text" placeholder="Your Name" />
+                                    <label for="last-name">Last Name <span>**</span></label>
+                                    <input id="last" type="text" placeholder="Your LastmName" />
                                     <label for="name">Username <span>**</span></label>
-                                    <input id="name" type="text" placeholder="Your Name" />
+                                    <input id="username" type="text" placeholder="Your username" />
                                     <label for="email-id">Email Address <span>**</span></label>
                                     <input id="email-id" type="text" placeholder="Your Email" />
                                     <label for="pass">Password <span>**</span></label>
@@ -127,7 +151,7 @@
                                     <label for="pass">Confirm Password <span>**</span></label>
                                     <input id="confirmpass" type="password" placeholder="*****" />
                                     <div class="mt-10"></div>
-                                    <button class="login-btn w-100">Register Now</button>
+                                    <button class="login-btn w-100" id="signup-submit">Register Now</button>
                                     <div class="sign-up text-center mt-30">
                                         <span>Already have account?</span>
                                         <a href="login.html" class="login-text-btn">Login Now</a>

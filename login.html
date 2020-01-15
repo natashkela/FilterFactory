@@ -145,9 +145,19 @@
                         <div class="basic-login">
                             <h3 class="mb-20">Login From Here</h3>
                             <div class="mb-30"></div>
-                            <form action="#">
+                            <?php
+                              if(isset($_GET['error'])) {
+                                if($_GET['error'] == "wrongpwd") {
+                                  echo <p class="signuperror">Your password is incorrect!</p>;
+                                }
+                              }
+                              else if ($_GET['login'] == "success") {
+                                echo <p class="loginsuccess">You're Logged In!</p>;
+                              }
+                            ?>
+                            <form action="includes/login.inc.php" method="post">
                                 <label for="name">User Name <span>**</span></label>
-                                <input id="name" type="text" placeholder="Your Name" />
+                                <input id="username" type="text" placeholder="Your Name" />
                                 <label for="pass">Password <span>**</span></label>
                                 <input id="pass" type="password" placeholder="******" />
                                 <div class="login-action mb-20 fix">
@@ -159,7 +169,7 @@
                                         <a href="resetPassword.html">Forgot your password?</a>
                                     </span>
                                 </div>
-                                <button class="login-btn w-100">Login Now</button>
+                                <button class="login-btn w-100" id="login-submit">Login Now</button>
                                 <div class="sign-up text-center mt-30">
                                     <span>New User?</span>
                                     <button class="login-text-btn"><a href="register.html">Register Now</a></button>
