@@ -33,8 +33,7 @@
           exit();
         }
         else {
-          $sql = "INSERT INTO users (first_name, last_name, email, pwd)
-            VALUES (?, ?, ?, ?, ? )";
+          $sql = "INSERT INTO users (first_name, last_name, email) VALUES (?, ?, ?)";
           $stmt = mysqli_stmt_init($conn);
           if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../register.php?error=sqlerror");
