@@ -1,4 +1,6 @@
 <?php
+print_r($_POST);
+exit(1);
   if (!empty($_POST)) {
     print_r("Are we getting here?");
     exit(1);
