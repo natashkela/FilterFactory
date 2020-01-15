@@ -143,13 +143,13 @@
                                     <label for="last-name">Last Name <span>**</span></label>
                                     <input name="last" id="last" type="text" placeholder="Your LastmName" />
                                     <label for="name">Username <span>**</span></label>
-                                    <input id="username" type="text" placeholder="Your username" />
+                                    <input name="username" id="username" type="text" placeholder="Your username" />
                                     <label for="email-id">Email Address <span>**</span></label>
-                                    <input id="email-id" type="text" placeholder="Your Email" />
+                                    <input name="email-id" id="email-id" type="text" placeholder="Your Email" />
                                     <label for="pass">Password <span>**</span></label>
-                                    <input id="pass" type="password" placeholder="*****" />
+                                    <input name="pass" id="pass" type="password" placeholder="*****" />
                                     <label for="pass">Confirm Password <span>**</span></label>
-                                    <input id="confirmpass" type="password" placeholder="*****" />
+                                    <input name="confirmpass" id="confirmpass" type="password" placeholder="*****" />
                                     <div class="mt-10"></div>
                                     <button class="login-btn w-100" type="submit">Register Now</button>
                                     <div class="sign-up text-center mt-30">
