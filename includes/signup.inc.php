@@ -10,7 +10,6 @@ if (!empty($_POST)) {
     $email = $_POST['email-id'];
     $password = $_POST['pass'];
     $confirmpass = $_POST['confirm_pass'];
-	print_r($_POST);
     if(empty($first) || empty($last) || empty($email) || empty($password)) {
       header("Location: ../register.php?error=emptyfields&uid=&email=" .$email);
       exit();
@@ -24,6 +23,7 @@ if (!empty($_POST)) {
       $sql->bind_param("s", $email);
       $sql->execute();
       $resultCheck = $sql->affected_rows;
+	    print_r($resultCheck);
       if ($resultCheck > 0) {
         header("Location: ../register.php?error=usertaken&email=".$email);
         exit();
@@ -39,8 +39,6 @@ if (!empty($_POST)) {
           exit();
       }
     }
-    print_r("Did we get here?");
-    exit(1);
     $sql->close();
     $conn->close();
   }
