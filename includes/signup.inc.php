@@ -21,14 +21,14 @@
       exit();
     }
     else {
-      $sql ="SELECT email from users WHERE email=?";
+      $sql ="SELECT email from users WHERE email=".$email;
       $stmt = mysqli_stmt_init($conn);
-      if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../register.php?error=sqlerror");
-        exit();
-      }
-      else {
-        mysqli_stmt_bind_param($stmt, "s", $username);
+//      if (!mysqli_stmt_prepare($stmt, $sql)) {
+//        header("Location: ../register.php?error=sqlerror");
+//        exit();
+//      }
+//      else {
+        mysqli_stmt_bind_param($stmt, "s", $email);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
@@ -52,7 +52,7 @@
             exit();
           }
         }
-      }
+//      }
     }
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
