@@ -29,8 +29,11 @@
 //      }
 //      else {
         mysqli_stmt_bind_param($stmt, "s", $email);
+        print_r("I was here first");
         mysqli_stmt_execute($stmt);
+        print_r("I am here");
         mysqli_stmt_store_result($stmt);
+        exit(1);
         $resultCheck = mysqli_stmt_num_rows($stmt);
         if ($resultCheck > 0) {
           header("Location: ../register.php?error=usertaken&email=".$email);
