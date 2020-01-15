@@ -137,7 +137,7 @@
                                     echo '<p class="signusuccess">Signup successful!</p>';
                                   }
                                 ?>
-                                <form action="includes/signup.inc.php" method="POST">
+                                <form action="includes/signup.inc.php" method="POST" id="signup-submit">
                                     <label for="first-name">First Name <span>**</span></label>
                                     <input id="first" type="text" placeholder="Your Name" />
                                     <label for="last-name">Last Name <span>**</span></label>
@@ -151,7 +151,7 @@
                                     <label for="pass">Confirm Password <span>**</span></label>
                                     <input id="confirmpass" type="password" placeholder="*****" />
                                     <div class="mt-10"></div>
-                                    <button class="login-btn w-100" id="signup-submit">Register Now</button>
+                                    <button class="login-btn w-100" type="submit">Register Now</button>
                                     <div class="sign-up text-center mt-30">
                                         <span>Already have account?</span>
                                         <a href="login.html" class="login-text-btn">Login Now</a>

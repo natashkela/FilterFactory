@@ -1,5 +1,9 @@
 <?php
+print_r($_POST);
+exit(1);
   if (isset($_POST['signup-submit'])) {
+    print_r("asdasdasdsada");
+    exit(1);
     require 'dbh.inc.php';
 
     $first = $_POST['first'];
