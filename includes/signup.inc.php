@@ -1,7 +1,5 @@
 <?php
 if (!empty($_POST)) {
-	print_r("Are we getting here?");
-	exit(1);
 	require 'dbh.inc.php';
 	print_r("Are we not even getting here?");
     if (!$conn) {
