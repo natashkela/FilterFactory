@@ -2,9 +2,9 @@
   if (!empty($_POST)) {
     require 'dbh.inc.php';
 
-    print_r("<pre>");
-    print_r($_POST);
-    exit(1);
+//    print_r("<pre>");
+//    print_r($_POST);
+//    exit(1);
     $first = $_POST['first'];
     $last = $_POST['last'];
     $email = $_POST['email-id'];
@@ -15,7 +15,8 @@
       header("Location: ../register.php?error=emptyfields&uid=&email=" .$email);
       exit();
     }
-    else if ($password !== $confirmpass) {
+    else if ($password != $confirmpass) {
+      print_r($password.' '.$confirmpass);
       header("Location: ../register.php?error=passwordcheck&mail=".$email);
       exit();
     }
