@@ -139,9 +139,9 @@
                                 ?>
                                 <form action="includes/signup.inc.php" method="POST" id="signup-submit">
                                     <label for="first-name">First Name <span>**</span></label>
-                                    <input id="first" type="text" placeholder="Your Name" />
+                                    <input name="first" id="first" type="text" placeholder="Your Name" />
                                     <label for="last-name">Last Name <span>**</span></label>
-                                    <input id="last" type="text" placeholder="Your LastmName" />
+                                    <input name="last" id="last" type="text" placeholder="Your LastmName" />
                                     <label for="name">Username <span>**</span></label>
                                     <input id="username" type="text" placeholder="Your username" />
                                     <label for="email-id">Email Address <span>**</span></label>
