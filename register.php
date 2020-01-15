@@ -149,7 +149,7 @@
                                     <label for="pass">Password <span>**</span></label>
                                     <input name="pass" id="pass" type="password" placeholder="*****" />
                                     <label for="pass">Confirm Password <span>**</span></label>
-                                    <input name="confirmpass" id="confirmpass" type="password" placeholder="*****" />
+                                    <input name="confirm_pass" id="confirm_pass" type="password" placeholder="*****" />
                                     <div class="mt-10"></div>
                                     <button class="login-btn w-100" type="submit">Register Now</button>
                                     <div class="sign-up text-center mt-30">

@@ -15,7 +15,7 @@
     else if ($password !== $confirmpass) {
       header("Location: ../register.php?error=passwordcheck&mail=".$email);
       exit();
-    }
+    } 
     else {
       $sql ="SELECT email from users WHERE email=?";
       $stmt = mysqli_stmt_init($conn);
