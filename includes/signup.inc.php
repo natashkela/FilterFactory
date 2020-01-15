@@ -2,6 +2,9 @@
   if (!empty($_POST)) {
     require 'dbh.inc.php';
 
+    print_r("<pre>");
+    print_r($_POST);
+    exit(1);
     $first = $_POST['first'];
     $last = $_POST['last'];
     $email = $_POST['email-id'];
@@ -15,7 +18,7 @@
     else if ($password !== $confirmpass) {
       header("Location: ../register.php?error=passwordcheck&mail=".$email);
       exit();
-    } 
+    }
     else {
       $sql ="SELECT email from users WHERE email=?";
       $stmt = mysqli_stmt_init($conn);
