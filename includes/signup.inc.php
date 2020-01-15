@@ -48,6 +48,9 @@
 
             mysqli_stmt_bind_param($stmt, "sss", $first, $last, $email);
             mysqli_stmt_execute($stmt);
+            $resultCheck = mysqli_stmt_num_rows($stmt);
+            print_r($resultCheck);
+            exit(1);
             header("Location: ../profile.html?signup=success");
             exit();
           }
