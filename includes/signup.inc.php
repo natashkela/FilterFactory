@@ -4,6 +4,7 @@
 
     if (!$conn) {
         print_r("Are we here?");
+        exit(1);
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
     }
