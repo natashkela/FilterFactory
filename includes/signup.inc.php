@@ -1,7 +1,6 @@
 <?php
 if (!empty($_POST)) {
 	require 'dbh.inc.php';
-	print_r("Are we not even getting here?");
     if (!$conn) {
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
@@ -11,6 +10,7 @@ if (!empty($_POST)) {
     $email = $_POST['email-id'];
     $password = $_POST['pass'];
     $confirmpass = $_POST['confirm_pass'];
+	print_r($_POST);
     if(empty($first) || empty($last) || empty($email) || empty($password)) {
       header("Location: ../register.php?error=emptyfields&uid=&email=" .$email);
       exit();
