@@ -12,16 +12,12 @@
       header("Location: ../register.html?error=emptyfields&uid=&email=" .$email);
       exit();
     }
-    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      header("Location: ../register.html?error=invalidemail&uid=" .$username);
-      exit();
-    }
-    else if ($password !== $passwordRepeat)) {
+    else if ($password !== $confirmpass) {
       header("Location: ../register.html?error=passwordcheck&mail=".$email);
       exit();
     }
     else {
-      $sql ="SELECT uidUsers from users WHERE uidUsers=?";
+      $sql ="SELECT email from users WHERE email=?";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../register.html?error=sqlerror");
