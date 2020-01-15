@@ -50,7 +50,7 @@
             mysqli_stmt_execute($stmt);
             header("Location: ../profile.html?signup=success");
             exit();
-          }
+//          }
         }
 //      }
     }
