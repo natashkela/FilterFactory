@@ -1,8 +1,8 @@
 <?php
 
-$dbServername = "root";
+$dbServername = "filterfactory.app";
 $dbUsername = "";
 $dbPassword = "";
 $dbName = "filterfa_main_db";
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($dbServername, $dbUsername,$dbName, $dbPassword);
