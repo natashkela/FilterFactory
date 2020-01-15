@@ -33,8 +33,8 @@ if (!empty($_POST)) {
           $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
           $sql->bind_param("sss", $first, $last, $email);
           $sql->execute();
-//           print_r($sql->affected_rows);
-//           print_r($first.' '.$last.' '.$email);
+          print_r($sql->affected_rows);
+          print_r($first.' '.$last.' '.$email);
           header("Location: ../profile.html?signup=success");
           exit();
 //       }
