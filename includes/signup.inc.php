@@ -21,7 +21,7 @@
       exit();
     }
     else {
-      $sql ="SELECT email from users WHERE email=".$email;
+      $sql ="SELECT email from users WHERE email=?";
       $stmt = mysqli_stmt_init($conn);
 //      if (!mysqli_stmt_prepare($stmt, $sql)) {
 //        header("Location: ../register.php?error=sqlerror");
