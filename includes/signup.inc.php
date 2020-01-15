@@ -46,7 +46,7 @@
           else {
             $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-            mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $email, $hashedPwd);
+            mysqli_stmt_bind_param($stmt, "sss", $first, $last, $email);
             mysqli_stmt_execute($stmt);
             header("Location: ../profile.html?signup=success");
             exit();
