@@ -1,6 +1,6 @@
 <?php
 
-$dbServername = "filterfactory.app";
+$dbServername = "136.243.203.211";
 $dbUsername = "root";
 $dbPassword = "pass";
 $dbName = "filterfa_main_db";
