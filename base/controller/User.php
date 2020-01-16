@@ -1,6 +1,5 @@
 <?php
-namespace FilterFactory;
-class Register
+class User
 {
     /**
      * Function that will call model to

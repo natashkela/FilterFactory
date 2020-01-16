@@ -1,6 +1,5 @@
 <?php
-namespace FilterFactory;
-use FilterFactory\Register as Register;
+require('../base/controller/User.php');
 ini_set("display_errors","On");
     $posted_data = $_POST;
     $return_array = array();
@@ -16,7 +15,7 @@ ini_set("display_errors","On");
      */
     function register_user(){
         global $posted_data, $return_array;
-        $register = new Register();
+        $register = new User();
         return $register->RegisterUser($posted_data);
     }
 
