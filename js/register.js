@@ -8,7 +8,6 @@ $(document).ready(function(){
             dataType:'json',
             success : function(data) {
                 //Success Response
-                console.log(data);
             },
             error : function(request,error)
             {

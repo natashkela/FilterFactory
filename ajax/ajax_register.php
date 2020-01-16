@@ -1,6 +1,7 @@
 <?php
-require('../base/controller/User.php');
-ini_set("display_errors","On");
+require('../base/controller/UserController.php');
+require('../base/models/UserModel.php');
+require_once('../base/models/dbh.inc.php');
     $posted_data = $_POST;
     $return_array = array();
     $request_name = $posted_data['request_name'];
@@ -15,7 +16,8 @@ ini_set("display_errors","On");
      */
     function register_user(){
         global $posted_data, $return_array;
-        $register = new User();
+        print_r("am i hereeee????");
+        $register = new UserController();
         return $register->RegisterUser($posted_data);
     }
 
