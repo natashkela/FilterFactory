@@ -20,12 +20,15 @@ class UserController
         if(!isset($user_data['email-id'])){
             $errors[] = array('missing_field'=>'email-id','message'=>'Email is missing');
         }
-        print_r("Am I hereeeee????????");
         $return = array();
         if(empty($errors)){
             $user = new UserModel();
-            $return['status'] = 1;
-            $return['data'] = $user->InsertUser($user_data);
+            $return['status'] = $return['data'] ? 1 : 0;
+            if($return['status'] == 0){
+                $return['errors'] = array('error_type'=>'user_exists','message'=>'User Already Exists');
+                $return['status'] = 0;
+                $return['data']=array();
+            }
         }
         else{
             print_r("Or not");

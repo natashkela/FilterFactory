@@ -16,9 +16,7 @@ require_once('../base/models/dbh.inc.php');
      */
     function register_user(){
         global $posted_data, $return_array;
-        print_r("am i hereeee????");
         $register = new UserController();
         return $register->RegisterUser($posted_data);
     }
-
-    return json_encode($return_array);
+    echo json_encode($return_array);
