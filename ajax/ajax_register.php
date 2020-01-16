@@ -1,6 +1,6 @@
 <?php
 namespace FilterFactory;
-use FilterFactory as Register;
+use FilterFactory\Register as Register;
 ini_set("display_errors","On");
     $posted_data = $_POST;
     $return_array = array();
