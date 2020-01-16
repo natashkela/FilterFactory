@@ -137,21 +137,19 @@
                                     echo '<p class="signusuccess">Signup successful!</p>';
                                   }
                                 ?>
-                                <form action="includes/signup.inc.php" method="POST" id="signup-submit">
+                                <form id="signup-submit" method="POST">
                                     <label for="first-name">First Name <span>**</span></label>
-                                    <input name="first" id="first" type="text" placeholder="Your Name" />
+                                    <input name="first" required id="first" type="text" placeholder="Your Name" />
                                     <label for="last-name">Last Name <span>**</span></label>
-                                    <input name="last" id="last" type="text" placeholder="Your LastmName" />
-                                    <label for="name">Username <span>**</span></label>
-                                    <input name="username" id="username" type="text" placeholder="Your username" />
+                                    <input name="last" required id="last" type="text" placeholder="Your LastmName" />
                                     <label for="email-id">Email Address <span>**</span></label>
-                                    <input name="email-id" id="email-id" type="text" placeholder="Your Email" />
+                                    <input name="email-id" required id="email-id" type="text" placeholder="Your Email" />
                                     <label for="pass">Password <span>**</span></label>
-                                    <input name="pass" id="pass" type="password" placeholder="*****" />
+                                    <input name="pass" required id="pass" type="password" placeholder="*****" />
                                     <label for="pass">Confirm Password <span>**</span></label>
-                                    <input name="confirm_pass" id="confirm_pass" type="password" placeholder="*****" />
+                                    <input name="confirm_pass" required id="confirm_pass" type="password" placeholder="*****" />
                                     <div class="mt-10"></div>
-                                    <button class="login-btn w-100" type="submit">Register Now</button>
+                                    <a href="#" class="login-btn register-now w-100">Register Now</a>
                                     <div class="sign-up text-center mt-30">
                                         <span>Already have account?</span>
                                         <a href="login.html" class="login-text-btn">Login Now</a>
@@ -253,5 +251,6 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/register.js"></script>
     </body>
 </html>
