@@ -23,6 +23,7 @@ class UserController
         $return = array();
         if(empty($errors)){
             $user = new UserModel();
+            $return = $user->InsertUser($user_data);
             $return['status'] = $return['data'] ? 1 : 0;
             if($return['status'] == 0){
                 $return['errors'] = array('error_type'=>'user_exists','message'=>'User Already Exists');
@@ -31,7 +32,6 @@ class UserController
             }
         }
         else{
-            print_r("Or not");
             $return['errors'] = $errors;
             $return['status'] = 0;
             $return['data']=array();

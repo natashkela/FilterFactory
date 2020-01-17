@@ -20,3 +20,5 @@ require_once('../base/models/dbh.inc.php');
         return $register->RegisterUser($posted_data);
     }
     echo json_encode($return_array);
+
+

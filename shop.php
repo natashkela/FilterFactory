@@ -79,7 +79,7 @@
                                     <nav id="mobile-menu">
                                         <ul>
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop.php">Shop</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="#">More</a>
                                                 <ul class="submenu">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                                 <div class="header-btn text-right">
-                                    <a href="register.html" class="x-btn btn-border btn-squ">Sign up</a>
+                                    <a href="register.php" class="x-btn btn-border btn-squ">Sign up</a>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +183,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <div class="row">
+                                <div class="tab-pane fade s
+                                <?php
+
+                                ?>
                                         <div class="col-lg-4 col-md-6">
                                             <div class="product mb-40">
                                                 <div class="product__img">
@@ -197,206 +199,6 @@
                                                 </div>
                                                 <div class="product__content text-center pt-30">
                                                     <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img2.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Legend Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img3.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Akari Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img4.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Bakari Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img5.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Romada Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img6.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Sikkar Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img7.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Minners Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img8.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Dolando Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img9.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Romada Product</a></h4>
                                                     <div class="price">
                                                         <span>$95.00</span>
                                                         <span class="old-price">$120.00</span>
