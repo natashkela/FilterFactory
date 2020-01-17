@@ -201,7 +201,7 @@ require_once('base/models/Filters.php');
                                                             <a href="product-details.html"><img src="img/filter-thumbnails/filter_id_<?php echo $filter['filter_id'];?>.jpg"
                                                                                                 alt=""></a>
                                                             <div class="product-action text-center">
-                                                                <a href="#"><i class="ti-heart"></i></a>
+                                                                
                                                                 <a href="#" class="add-to-cart" data-filter-id="<?php echo $filter['filter_id'];?>" data-filter-name="<?php echo $filter['filter_name'];?>"><i class="ti-bag"></i></a>
                                                                 <a href="<?php echo $filterDetailUrl;?>"><i
                                                                             class="ti-eye"></i></a>
@@ -217,7 +217,7 @@ require_once('base/models/Filters.php');
                                                                 $counter =0;
                                                                 for($i=0;$i<5;$i++){
                                                                     $counter++; 
-                                                                    ?>
+                                                                    ?> 
                                                                     <i class="fas fa-star <?php if($counter<=$filterRating){ echo "active";}?>"></i>
                                                                     <?php
                                                                 }
