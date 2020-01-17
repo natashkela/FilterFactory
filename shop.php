@@ -201,7 +201,7 @@ require_once('base/models/Filters.php');
                                                                                                 alt=""></a>
                                                             <div class="product-action text-center">
                                                                 <a href="#"><i class="ti-heart"></i></a>
-                                                                <a href="#"><i class="ti-bag"></i></a>
+                                                                <a href="#" class="add-to-cart" data-filter-id="<?php echo $filter['filter_id'];?>" data-filter-name="<?php echo $filter['filter_name'];?>"><i class="ti-bag"></i></a>
                                                                 <a href="<?php echo $filterDetailUrl;?>"><i
                                                                             class="ti-eye"></i></a>
                                                             </div>
@@ -209,7 +209,7 @@ require_once('base/models/Filters.php');
                                                         <div class="product__content text-center pt-30">
                                                             <h4 class="pro-title"><a href="<?php echo $filterDetailUrl;?>"><?php echo $filter['filter_name'];?></a></h4>
                                                             <div class="price">
-                                                                <span><?php echo $filter['price'];?></span>
+                                                                <span>$ <?php echo $filter['filter_price'];?></span>
                                                             </div>
                                                             <div class="ratings mt-10">
                                                                 <i class="ti-star"></i>
@@ -252,13 +252,13 @@ require_once('base/models/Filters.php');
                                                             </div>
                                                             <h4 class="pro-title"><a href="<?php echo $filterDetailUrl;?>"><?php echo $filter['filter_name'];?></a></h4>
                                                             <div class="price">
-                                                                <span><?php echo $filter['price'];?></span>
+                                                                <span>$ <?php echo $filter['filter_price'];?></span>
                                                             </div>
                                                         </div>
                                                         <p><?php
-                                                            $filter['filter_description'];?></p>
+                                                            $filter['filter_description'];?></p> 
                                                         <div class="product-action-list pt-15">
-                                                            <a class="btn-cart" href="#">add to cart</a>
+                                                            <a class="btn-cart add-to-cart" data-filter-id="<?php echo $filter['filter_id'];?>" data-filter-name="<?php echo $filter['filter_name'];?>" href="#">add to cart</a>
                                                             <a class="action-btn" href="#"><i class="ti-heart"></i></a>
                                                             <a class="action-btn" href="<?php echo $filterDetailUrl;?>"><i
                                                                         class="ti-eye"></i></a>
@@ -379,5 +379,6 @@ require_once('base/models/Filters.php');
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/shop.js"></script>
     </body>
 </html>
