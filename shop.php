@@ -3,7 +3,7 @@ require_once('base/models/Filters.php');
 ?>
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
+    <>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title> Buy Filters | Filter Factory  </title>
@@ -27,6 +27,7 @@ require_once('base/models/Filters.php');
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" hreef="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
         <link rel="stylesheet" href="css/responsive.css">
     </head>
     <body>
@@ -211,12 +212,16 @@ require_once('base/models/Filters.php');
                                                             <div class="price">
                                                                 <span>$ <?php echo $filter['filter_price'];?></span>
                                                             </div>
-                                                            <div class="ratings mt-10">
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
+                                                            <div class="ratings mt-10" data-rating="<?php $filterRating = 4; echo $filterRating;?>">
+                                                                <?php
+                                                                $counter =0;
+                                                                for($i=0;$i<5;$i++){
+                                                                    $counter++; 
+                                                                    ?>
+                                                                    <i class="fas fa-star <?php if($counter<=$filterRating){ echo "active";}?>"></i>
+                                                                    <?php
+                                                                }
+                                                                ?>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -243,12 +248,16 @@ require_once('base/models/Filters.php');
                                                 <div class="col-lg-8">
                                                     <div class="product-list-content pt-10 mb-30">
                                                         <div class="product__content mb-20">
-                                                            <div class="ratings mb-10">
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
-                                                                <i class="ti-star"></i>
+                                                            <div class="ratings mb-10" data-rating="<?php $filterRating = 4; echo $filterRating;?>">
+                                                                <?php
+                                                                $counter =0;
+                                                                for($i=0;$i<5;$i++){
+                                                                    $counter++;
+                                                                    ?>
+                                                                    <i class="fas fa-star <?php if($counter<$filterRating){ echo "active";}?>"></i>
+                                                                <?php
+                                                                    }
+                                                                ?>
                                                             </div>
                                                             <h4 class="pro-title"><a href="<?php echo $filterDetailUrl;?>"><?php echo $filter['filter_name'];?></a></h4>
                                                             <div class="price">
@@ -256,7 +265,7 @@ require_once('base/models/Filters.php');
                                                             </div>
                                                         </div>
                                                         <p><?php
-                                                            $filter['filter_description'];?></p> 
+                                                            $filter['filter_description'];?></p>
                                                         <div class="product-action-list pt-15">
                                                             <a class="btn-cart add-to-cart" data-filter-id="<?php echo $filter['filter_id'];?>" data-filter-name="<?php echo $filter['filter_name'];?>" href="#">add to cart</a>
                                                             <a class="action-btn" href="#"><i class="ti-heart"></i></a>

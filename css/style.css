@@ -7065,3 +7065,9 @@ textarea{
 	padding: 0 0 0 10px;
 	width: 100%;
 }
+.fas.fa-star{
+	font-weight:300;
+}
+.fas.fa-star.active{
+	font-weight:900;
+}
