@@ -7,7 +7,8 @@ class Filters{
         global $conn;
         $sql = $conn->prepare("SELECT * FROM filters");
         $sql->execute();
-        $result = $sql->get_result();
+        $results = $sql->get_result();
+        return $results;
 
     }
 }

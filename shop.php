@@ -1,3 +1,6 @@
+<?php
+require_once('base/models/Filters.php');
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -183,223 +186,89 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade s
-                                <?php
-
-                                ?>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-40">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img1.jpg" alt=""></a>
-                                                    <div class="product-action text-center">
-                                                        <a href="#"><i class="ti-heart"></i></a>
-                                                        <a href="#"><i class="ti-bag"></i></a>
-                                                        <a href="product-details.html"><i class="ti-eye"></i></a>
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <?php
+                                            $filters = new Filters();
+                                            $allFilters = $filters->GetAllFilters();
+                                            foreach($allFilters as $filter) {
+                                                $filterDetailUrl = "filter-detail.php?id=".$filter['filter_id'];
+                                                ?>
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="product mb-40">
+                                                        <div class="product__img">
+                                                            <a href="product-details.html"><img src="img/filter-thumbnails/filter_id_<?php echo $filter['filter_id'];?>.jpg"
+                                                                                                alt=""></a>
+                                                            <div class="product-action text-center">
+                                                                <a href="#"><i class="ti-heart"></i></a>
+                                                                <a href="#"><i class="ti-bag"></i></a>
+                                                                <a href="<?php echo $filterDetailUrl;?>"><i
+                                                                            class="ti-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content text-center pt-30">
+                                                            <h4 class="pro-title"><a href="<?php echo $filterDetailUrl;?>"><?php echo $filter['filter_name'];?></a></h4>
+                                                            <div class="price">
+                                                                <span><?php echo $filter['price'];?></span>
+                                                            </div>
+                                                            <div class="ratings mt-10">
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="product__content text-center pt-30">
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                    <div class="ratings mt-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                <?php
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-30">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img2.jpg" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="product-list-content pt-10 mb-30">
-                                                <div class="product__content mb-20">
-                                                    <div class="ratings mb-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
+                                    <?php
+                                        foreach($allFilters as $filter) {
+                                            $filterDetailUrl = "filter-detail.php?id=" . $filter['filter_id'];
+                                            ?>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="product mb-30">
+                                                        <div class="product__img">
+                                                            <a href="<?php echo $filterDetailUrl;?>"><img src="img/filter-thumbnails/filter_id_<?php echo $filter['filter_id'];?>.jpg"
+                                                                                                alt=""></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                    ut
-                                                    aliquip ex ea commodo consequat.
-                                                    Duis aute irure dolor in reprehenderit in voluptate.</p>
-                                                <div class="product-action-list pt-15">
-                                                    <a class="btn-cart" href="#">add to cart</a>
-                                                    <a class="action-btn" href="#"><i class="ti-heart"></i></a>
-                                                    <a class="action-btn" href="product-details.html"><i class="ti-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-30">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img3.jpg" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="product-list-content pt-10 mb-30">
-                                                <div class="product__content mb-20">
-                                                    <div class="ratings mb-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
+                                                <div class="col-lg-8">
+                                                    <div class="product-list-content pt-10 mb-30">
+                                                        <div class="product__content mb-20">
+                                                            <div class="ratings mb-10">
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                                <i class="ti-star"></i>
+                                                            </div>
+                                                            <h4 class="pro-title"><a href="<?php echo $filterDetailUrl;?>"><?php echo $filter['filter_name'];?></a></h4>
+                                                            <div class="price">
+                                                                <span><?php echo $filter['price'];?></span>
+                                                            </div>
+                                                        </div>
+                                                        <p><?php
+                                                            $filter['filter_description'];?></p>
+                                                        <div class="product-action-list pt-15">
+                                                            <a class="btn-cart" href="#">add to cart</a>
+                                                            <a class="action-btn" href="#"><i class="ti-heart"></i></a>
+                                                            <a class="action-btn" href="<?php echo $filterDetailUrl;?>"><i
+                                                                        class="ti-eye"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                    ut
-                                                    aliquip ex ea commodo consequat.
-                                                    Duis aute irure dolor in reprehenderit in voluptate.</p>
-                                                <div class="product-action-list pt-15">
-                                                    <a class="btn-cart" href="#">add to cart</a>
-                                                    <a class="action-btn" href="#"><i class="ti-heart"></i></a>
-                                                    <a class="action-btn" href="product-details.html"><i class="ti-eye"></i></a>
-                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-30">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img4.jpg" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="product-list-content pt-10 mb-30">
-                                                <div class="product__content mb-20">
-                                                    <div class="ratings mb-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                    ut
-                                                    aliquip ex ea commodo consequat.
-                                                    Duis aute irure dolor in reprehenderit in voluptate.</p>
-                                                <div class="product-action-list pt-15">
-                                                    <a class="btn-cart" href="#">add to cart</a>
-                                                    <a class="action-btn" href="#"><i class="ti-heart"></i></a>
-                                                    <a class="action-btn" href="product-details.html"><i class="ti-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-30">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img5.jpg" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="product-list-content pt-10 mb-30">
-                                                <div class="product__content mb-20">
-                                                    <div class="ratings mb-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                    ut
-                                                    aliquip ex ea commodo consequat.
-                                                    Duis aute irure dolor in reprehenderit in voluptate.</p>
-                                                <div class="product-action-list pt-15">
-                                                    <a class="btn-cart" href="#">add to cart</a>
-                                                    <a class="action-btn" href="#"><i class="ti-heart"></i></a>
-                                                    <a class="action-btn" href="product-details.html"><i class="ti-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product mb-30">
-                                                <div class="product__img">
-                                                    <a href="product-details.html"><img src="img/shop/img6.jpg" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="product-list-content pt-10 mb-30">
-                                                <div class="product__content mb-20">
-                                                    <div class="ratings mb-10">
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                        <i class="ti-star"></i>
-                                                    </div>
-                                                    <h4 class="pro-title"><a href="product-details.html">Medidove Product</a></h4>
-                                                    <div class="price">
-                                                        <span>$95.00</span>
-                                                        <span class="old-price">$120.00</span>
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna
-                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                    ut
-                                                    aliquip ex ea commodo consequat.
-                                                    Duis aute irure dolor in reprehenderit in voluptate.</p>
-                                                <div class="product-action-list pt-15">
-                                                    <a class="btn-cart" href="#">add to cart</a>
-                                                    <a class="action-btn" href="#"><i class="ti-heart"></i></a>
-                                                    <a class="action-btn" href="product-details.html"><i class="ti-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>
