@@ -155,7 +155,11 @@ require_once('base/models/Filters.php');
                     <div class="row mt-20">
                         <div class="col-xl-4 col-lg-5 col-md-6">
                             <div class="product-showing mb-40">
-                                <p>Showing 1–22 of 32 results</p>
+                                <?php
+                                $filters = new Filters();
+                                $allFilters = $filters->GetAllFilters();
+                                ?>
+                                <p>Showing <?php echo $allFilters->num_rows;?> results</p>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 col-md-6">
@@ -190,8 +194,6 @@ require_once('base/models/Filters.php');
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="row">
                                         <?php
-                                            $filters = new Filters();
-                                            $allFilters = $filters->GetAllFilters();
                                             foreach($allFilters as $filter) {
                                                 $filterDetailUrl = "filter-detail.php?id=".$filter['filter_id'];
                                                 ?>
@@ -217,7 +219,7 @@ require_once('base/models/Filters.php');
                                                                 $counter =0;
                                                                 for($i=0;$i<5;$i++){
                                                                     $counter++; 
-                                                                    ?> 
+                                                                    ?>
                                                                     <i class="fas fa-star <?php if($counter<=$filterRating){ echo "active";}?>"></i>
                                                                     <?php
                                                                 }
