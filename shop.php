@@ -144,14 +144,15 @@ require_once('base/models/Filters.php');
             <!-- shop-area start -->
             <section class="shop-banner-area pt-140 pb-140">
                 <div class="container">
-                    <div class="row">
-                      <div class="hero-form" style="visibility: visible; animation-delay: 1.3s; animation-name: fadeInUp;margin: auto; width: 70%; margin-bottom: 20px;">
-                        <form action="#">
-                          <input type="text" placeholder="Search for filters">
-                          <button type="submit">Search</button>
-                        </form>
-                      </div>
-                    </div>
+                    <!-- @TODO -->
+<!--                    <div class="row">-->
+<!--                      <div class="hero-form" style="visibility: visible; animation-delay: 1.3s; animation-name: fadeInUp;margin: auto; width: 70%; margin-bottom: 20px;">-->
+<!--                        <form action="#">-->
+<!--                          <input type="text" placeholder="Search for filters">-->
+<!--                          <button type="submit">Search</button>-->
+<!--                        </form>-->
+<!--                      </div>-->
+<!--                    </div>-->
                     <div class="row mt-20">
                         <div class="col-xl-4 col-lg-5 col-md-6">
                             <div class="product-showing mb-40">
@@ -175,19 +176,20 @@ require_once('base/models/Filters.php');
                                     </li>
                                 </ul>
                             </div>
-                            <div class="pro-filter d-flex align-items-center justify-content-end f-right mb-40">
-                                <h5>Sort by</h5>
-                                <form action="#">
-                                    <select name="pro-filter" id="pro-filter">
-                                        <option value="1">Newest </option>
-                                        <option value="2">Price: Low - High </option>
-                                        <option value="3">Price: High - Low </option>
-                                        <option value="4">Most Featured</option>
-                                    </select>
-                                </form>
-                            </div>
+                            <!-- @TODO -->
+<!--                            <div class="pro-filter d-flex align-items-center justify-content-end f-right mb-40">-->
+<!--                                <h5>Sort by</h5>-->
+<!--                                <form action="#">-->
+<!--                                    <select name="pro-filter" id="pro-filter">-->
+<!--                                        <option value="1">Newest </option>-->
+<!--                                        <option value="2">Price: Low - High </option>-->
+<!--                                        <option value="3">Price: High - Low </option>-->
+<!--                                        <option value="4">Most Featured</option>-->
+<!--                                    </select>-->
+<!--                                </form>-->
+<!--                            </div>-->
                         </div>
-                    </div>
+                    </div> 
                     <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="myTabContent">
@@ -270,7 +272,7 @@ require_once('base/models/Filters.php');
                                                             $filter['filter_description'];?></p>
                                                         <div class="product-action-list pt-15">
                                                             <a class="btn-cart add-to-cart" data-filter-id="<?php echo $filter['filter_id'];?>" data-filter-name="<?php echo $filter['filter_name'];?>" href="#">add to cart</a>
-                                                            <a class="action-btn" href="#"><i class="ti-heart"></i></a>
+                                                            
                                                             <a class="action-btn" href="<?php echo $filterDetailUrl;?>"><i
                                                                         class="ti-eye"></i></a>
                                                         </div>
@@ -281,20 +283,6 @@ require_once('base/models/Filters.php');
                                         }
                                     ?>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="basic-pagination basic-pagination-2 text-center mt-20">
-                                <ul>
-                                    <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                    <li><a href="#">01</a></li>
-                                    <li class="active"><a href="#">02</a></li>
-                                    <li><a href="#">03</a></li>
-                                    <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
