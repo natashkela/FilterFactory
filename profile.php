@@ -309,7 +309,7 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list w-50">
                                         <label>Name <span class="required">*</span></label>
-                                        <input type="text" placeholder="">
+                                        <input type="text" placeholder="" required name="name">
                                     </div>
                                 </div>
                                 <!-- Filter Price -->
@@ -317,7 +317,7 @@
                                     <div class="checkout-form-list w-50">
                                         <label>Price <span class="required">*</span></label>
                                         <span class="input-dollar left">
-                                          <input type="text" id="price" placeholder="">
+                                          <input type="text" id="price" placeholder="" required name="price">
                                         </span>
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@
                                     <div class="checkout-form-list w-50 hidden" id="converted-price">
                                         <label>Please note that the price for the posting will be:</label>
                                         <span class="input-dollar left">
-                                          <input type="text" id="converted-price-value" placeholder="">
+                                          <input type="text" name="converted-price-value" id="converted-price-value" placeholder="">
                                         </span>
                                     </div>
                                 </div>
@@ -343,11 +343,11 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list w-50">
                                         <label>Description <span class="required">*</span></label>
-                                        <textarea></textarea>
+                                        <textarea name="description" reqeuired></textarea>
                                     </div>
                                 </div>
                                 <!-- Button to Wait for Approval -->
-                                <button type="button" class="btn btn-success mb5 btn-rounded">Upload For Review</button>
+                                <button type="button" class="btn btn-success mb5 btn-rounded upload-review">Upload For Review</button>
                             </div>
                         </div>
                     </div>

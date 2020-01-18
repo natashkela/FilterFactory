@@ -189,7 +189,7 @@ require_once('base/models/Filters.php');
 <!--                                </form>-->
 <!--                            </div>-->
                         </div>
-                    </div> 
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="myTabContent">
